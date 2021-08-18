@@ -1,0 +1,77 @@
+/**
+ * LibreTexts Adoption Report Widget
+ * index.css (styles)
+ */
+
+/* Font */
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin');
+
+/* General Modal Styles*/
+.ar-modal * {
+    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.4285em;
+}
+
+/* Resource Title */
+#libreAR-res-title {
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+
+/* Resets */
+.ar-modal *,
+.ar-modal *:before,
+.ar-modal *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+.ar-modal input[type="text"],
+.ar-modal input[type="email"],
+.ar-modal input[type="search"],
+.ar-modal input[type="password"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.ar-modal [type="checkbox"],
+.ar-modal [type="radio"] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.ar-modal [type="number"]::-webkit-inner-spin-button,
+.ar-modal [type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+.ar-modal button,
+.ar-modal input, {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+.ar-modal button,
+.ar-modal input {
+  overflow: visible;
+}
+
+.ar-modal button {
+  text-transform: none;
+}
+
+.ar-modal button,
+.ar-modal html [type="button"],
+.ar-modal [type="reset"],
+.ar-modal [type="submit"] {
+  -webkit-appearance: button;
+
+}

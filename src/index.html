@@ -1,0 +1,382 @@
+<!--
+    LibreTexts Adoption Report Widget
+    index.html (html structure)
+-->
+
+<div class='ui modal ar-modal' id='libreAdoptionReportModal'>
+    <div class='header'>Adoption Report</div>
+    <div class='scrolling content'>
+        <span id='libreAR-res-title'></span>
+        <p>If you are an instructor or student using this LibreText in your class, it would help us greatly if you would fill out this form.</p>
+        <form class='ui form' novalidate>
+            <div class='two fields'>
+                <div class='required field' id='libreAR-email-field'>
+                    <label for='libreAR-email'>Your Email</label>
+                    <div class='ui left icon fluid input'>
+                        <input
+                            id='libreAR-email-input'
+                            type='email'
+                            name='libreAR-email'
+                            placeholder='Email...'
+                        />
+                        <i class='mail icon'></i>
+                    </div>
+                </div>
+                <div class='required field' id='libreAR-name-field'>
+                    <label for='libreAR-name'>Your Name</label>
+                    <div class='ui left icon fluid input'>
+                        <input
+                            id='libreAR-name-input'
+                            type='text'
+                            name='libreAR-name'
+                            placeholder='Name...'
+                        />
+                        <i class='user icon'></i>
+                    </div>
+                </div>
+            </div>
+            <div class='required field' id='libreAR-iam-field'>
+                <label for='ar-iam'>I am a(n)</label>
+                <div id='libreAR-iam-dropdown' class='ui selection dropdown'>
+                    <div class='text'></div>
+                    <i class='dropdown icon'></i>
+                </div>
+            </div>
+            <div id='libreAR-instructor-section'>
+                <div class='ui divider'></div>
+                <h3 class='ui header'>Instructor</h3>
+                <p>If you are using this LibreText in your class(es), please help us by providing some additional data.</p>
+                <div class='grouped fields required' id='libreAR-instr-libreNet-field'>
+                    <label for='ar-instr-librenet'>Is your Institution part of the LibreNet consortium?</label>
+                    <div class='field'>
+                        <div class='ui radio checkbox ar-instr-librenet-check'>
+                            <input type='radio' value='yes' name='libreAR-instr-librenet' tabindex='0' class='hidden' />
+                            <label>Yes</label>
+                        </div>
+                    </div>
+                    <div class='field'>
+                        <div class='ui radio checkbox ar-instr-librenet-check'>
+                            <input type='radio' value='no' name='libreAR-instr-librenet' tabindex='0' class='hidden' />
+                            <label>No</label>
+                        </div>
+                    </div>
+                    <div class='field'>
+                        <div class='ui radio checkbox ar-instr-librenet-check'>
+                            <input type='radio' value='dk' name='libreAR-instr-librenet' tabindex='0' class='hidden' />
+                            <label>Don't know</label>
+                        </div>
+                    </div>
+                </div>
+                <div class='required field' id='libreAR-instr-inst-dropdown-field'>
+                    <label>Institution Name</label>
+                    <div id='libreAR-instr-inst-dropdown' class='ui selection dropdown'>
+                        <div class='text'></div>
+                        <i class='dropdown icon'></i>
+                    </div>
+                </div>
+                <div class='required field' id='libreAR-instr-inst-field'>
+                    <label for='libreAR-not-libre-inst'>Institution Name</label>
+                    <div class='ui left icon fluid input'>
+                        <input
+                            id='libreAR-not-libre-inst-input'
+                            type='text'
+                            name='libreAR-not-libre-inst'
+                            placeholder='Institution...'
+                        />
+                        <i class='university icon'></i>
+                    </div>
+                </div>
+                <div class='required field' id='libreAR-instr-class-field'>
+                    <label for='libreAR-instr-class-input'>Class Name</label>
+                    <div class='ui left icon fluid input'>
+                        <input
+                            id='libreAR-instr-class-input'
+                            type='text'
+                            name='libreAR-instr-class-input'
+                            placeholder='Class...'
+                        />
+                        <i class='pencil icon'></i>
+                    </div>
+                </div>
+                <p><em>If you have tought this class multiple times, please fill out this form for each.</em></p>
+                <div class='required field' id='libreAR-instr-taught-field'>
+                    <label>When did you teach this class?</label>
+                    <div id='libreAR-instr-taught-dropdown' class='ui selection dropdown'>
+                        <div class='text'></div>
+                        <i class='dropdown icon'></i>
+                    </div>
+                </div>
+                <div class='required field' id='libreAR-instr-students-field'>
+                    <label for='libreAR-instr-num-students-input'>Number of Students</label>
+                    <div class='ui left icon fluid input'>
+                        <input
+                            id='libreAR-instr-num-students-input'
+                            type='number'
+                            min='0'
+                            name='libreAR-instr-num-students-input'
+                            placeholder='Number...'
+                        />
+                        <i class='users icon'></i>
+                    </div>
+                </div>
+                <div class='field'>
+                    <label for='libreAR-instr-replace-cost-input'>Cost of textbook that LibreTexts replaced</label>
+                    <div class='ui left icon fluid input'>
+                        <input
+                            id='libreAR-instr-replace-cost-input'
+                            type='number'
+                            min='0'
+                            name='libreAR-instr-replace-cost-input'
+                            placeholder='Cost...'
+                        />
+                        <i class='dollar icon'></i>
+                    </div>
+                </div>
+                <div class='grouped fields'>
+                    <label>In which ways did students use this LibreText in your class? (Select all that apply)</label>
+                    <div class='field'>
+                        <div class='ui checkbox ar-instr-student-access-check'>
+                            <input type='checkbox' id='libreAR-instr-student-access-online' tabindex='0' class='hidden' />
+                            <label>Online</label>
+                        </div>
+                    </div>
+                    <div class='field'>
+                        <div class='ui checkbox ar-instr-student-access-check'>
+                            <input type='checkbox' id='libreAR-instr-student-access-print' tabindex='0' class='hidden' />
+                            <label>Printed Book</label>
+                        </div>
+                    </div>
+                    <div class='field'>
+                        <div class='ui checkbox ar-instr-student-access-check'>
+                            <input type='checkbox' id='libreAR-instr-student-access-pdf' tabindex='0' class='hidden' />
+                            <label>Downloaded PDF</label>
+                        </div>
+                    </div>
+                    <div class='field'>
+                        <div class='ui checkbox ar-instr-student-access-check'>
+                            <input type='checkbox' id='libreAR-instr-student-access-lms' tabindex='0' class='hidden' />
+                            <label>Via LMS</label>
+                        </div>
+                    </div>
+                    <div class='field'>
+                        <div class='ui checkbox ar-instr-student-access-check'>
+                            <input type='checkbox' id='libreAR-instr-student-access-librebox' tabindex='0' class='hidden' />
+                            <label>LibreTexts in a Box</label>
+                        </div>
+                    </div>
+                </div>
+                <div class='field'>
+                    <label for='libreAR-instr-print-cost-input'>If you used a printed version of this LibreText, how much did it cost?</label>
+                    <div class='ui left icon fluid input'>
+                        <input
+                            id='libreAR-instr-print-cost-input'
+                            type='number'
+                            min='0'
+                            name='libreAR-instr-print-cost-input'
+                            placeholder='Cost...'
+                        />
+                        <i class='book icon'></i>
+                    </div>
+                </div>
+            </div>
+            <div id='libreAR-student-section'>
+                <div class='ui divider'></div>
+                <h3 class='ui header'>Student</h3>
+                <p>We are happy to hear that you are using LibreTexts in your classes.</p>
+                <div class='field'>
+                    <label>How is this LibreText used in your class?</label>
+                    <div id='libreAR-student-use-dropdown' class='ui selection dropdown'>
+                        <div class='text'></div>
+                        <i class='dropdown icon'></i>
+                    </div>
+                </div>
+                <div class='field'>
+                    <label for='libreAR-student-inst-input'>Institution Name</label>
+                    <div class='ui left icon fluid input'>
+                        <input
+                            id='libreAR-student-inst-input'
+                            type='text'
+                            name='libreAR-student-inst-input'
+                            placeholder='Institution...'
+                        />
+                        <i class='university icon'></i>
+                    </div>
+                </div>
+                <div class='field'>
+                    <label for='libreAR-student-class-input'>Class Name</label>
+                    <div class='ui left icon fluid input'>
+                        <input
+                            id='libreAR-student-class-input'
+                            type='text'
+                            name='libreAR-student-class-input'
+                            placeholder='Class...'
+                        />
+                        <i class='pencil icon'></i>
+                    </div>
+                </div>
+                <div class='field'>
+                    <label for='libreAR-student-instructor-input'>Instructor Name</label>
+                    <div class='ui left icon fluid input'>
+                        <input
+                            id='libreAR-student-instructor-input'
+                            type='text'
+                            name='libreAR-student-instructor-input'
+                            placeholder='Instructor...'
+                        />
+                        <i class='user circle outline icon'></i>
+                    </div>
+                </div>
+                <div class='grouped fields' id='libreAR-student-quality-field'>
+                    <label for='libreAR-student-quality'>On a scale from 1 to 5, what is the quality of this LibreTexts content?</label>
+                    <div class='field'>
+                        <div class='ui radio checkbox ar-student-quality-check'>
+                            <input type='radio' name='libreAR-student-quality' value='1' tabindex='0' class='hidden' />
+                            <label>1 (Very low)</label>
+                        </div>
+                    </div>
+                    <div class='field'>
+                        <div class='ui radio checkbox ar-student-quality-check'>
+                            <input type='radio' name='libreAR-student-quality' value='2' tabindex='0' class='hidden' />
+                            <label>2</label>
+                        </div>
+                    </div>
+                    <div class='field'>
+                        <div class='ui radio checkbox ar-student-quality-check'>
+                            <input type='radio' name='libreAR-student-quality' value='3' tabindex='0' class='hidden' />
+                            <label>3</label>
+                        </div>
+                    </div>
+                    <div class='field'>
+                        <div class='ui radio checkbox ar-student-quality-check'>
+                            <input type='radio' name='libreAR-student-quality' value='4' tabindex='0' class='hidden' />
+                            <label>4</label>
+                        </div>
+                    </div>
+                    <div class='field'>
+                        <div class='ui radio checkbox ar-student-quality-check'>
+                            <input type='radio' name='libreAR-student-quality' value='5' tabindex='0' class='hidden' />
+                            <label>5 (Very high)</label>
+                        </div>
+                    </div>
+                </div>
+                <div class='grouped fields'>
+                    <label for='libreAR-student-navigate'>On a scale from 1 to 5, how easy is it to navigate the LibreTexts site?</label>
+                    <div class='field'>
+                        <div class='ui radio checkbox ar-student-navigate-check'>
+                            <input type='radio' name='libreAR-student-navigate' value='1' tabindex='0' class='hidden' />
+                            <label>1 (Very hard)</label>
+                        </div>
+                    </div>
+                    <div class='field'>
+                        <div class='ui radio checkbox ar-student-navigate-check'>
+                            <input type='radio' name='libreAR-student-navigate' value='2' tabindex='0' class='hidden' />
+                            <label>2</label>
+                        </div>
+                    </div>
+                    <div class='field'>
+                        <div class='ui radio checkbox ar-student-navigate-check'>
+                            <input type='radio' name='libreAR-student-navigate' value='3' tabindex='0' class='hidden' />
+                            <label>3</label>
+                        </div>
+                    </div>
+                    <div class='field'>
+                        <div class='ui radio checkbox ar-student-navigate-check'>
+                            <input type='radio' name='libreAR-student-navigate' value='4' tabindex='0' class='hidden' />
+                            <label>4</label>
+                        </div>
+                    </div>
+                    <div class='field'>
+                        <div class='ui radio checkbox ar-student-navigate-check'>
+                            <input type='radio' name='libreAR-student-navigate' value='5' tabindex='0' class='hidden' />
+                            <label>5 (Very easy)</label>
+                        </div>
+                    </div>
+                </div>
+                <div class='grouped fields'>
+                    <label>How did you access this LibreText? (Select all that apply)</label>
+                    <div class='field'>
+                        <div class='ui checkbox ar-student-access-check'>
+                            <input type='checkbox' id='libreAR-student-access-online' tabindex='0' class='hidden' />
+                            <label>Online</label>
+                        </div>
+                    </div>
+                    <div class='field'>
+                        <div class='ui checkbox ar-student-access-check'>
+                            <input type='checkbox' id='libreAR-student-access-print' tabindex='0' class='hidden' />
+                            <label>Printed Book</label>
+                        </div>
+                    </div>
+                    <div class='field'>
+                        <div class='ui checkbox ar-student-access-check'>
+                            <input type='checkbox' id='libreAR-student-access-pdf' tabindex='0' class='hidden' />
+                            <label>Downloaded PDF</label>
+                        </div>
+                    </div>
+                    <div class='field'>
+                        <div class='ui checkbox ar-student-access-check'>
+                            <input type='checkbox' id='libreAR-student-access-lms' tabindex='0' class='hidden' />
+                            <label>Via LMS</label>
+                        </div>
+                    </div>
+                    <div class='field'>
+                        <div class='ui checkbox ar-student-access-check'>
+                            <input type='checkbox' id='libreAR-student-access-librebox' tabindex='0' class='hidden' />
+                            <label>LibreTexts in a Box</label>
+                        </div>
+                    </div>
+                </div>
+                <div class='field'>
+                    <label for='libreAR-student-print-cost-input'>If you used a printed version of this LibreText, how much did it cost?</label>
+                    <div class='ui left icon fluid input'>
+                        <input
+                            id='libreAR-student-print-cost-input'
+                            type='number'
+                            min='0'
+                            name='libreAR-student-print-cost-input'
+                            placeholder='Cost...'
+                        />
+                        <i class='book icon'></i>
+                    </div>
+                </div>
+            </div>
+            <div class='ui divider'></div>
+            <div class='field'>
+                <label for='libreAR-addtl-comments-input'>If you have additional comments, please share below</label>
+                <div class='ui left icon fluid input'>
+                    <input
+                        id='libreAR-addtl-comments-input'
+                        type='text'
+                        name='libreAR-addtl-comments-input'
+                        placeholder='Comments...'
+                    />
+                    <i class='comment icon'></i>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class='actions'>
+        <div id='libreAR-cancel-btn' class='ui button'>Cancel</div>
+        <div id='libreAR-submit-btn' class='ui green right labeled icon button'>
+            <i class='check icon'></i>
+            Submit
+        </div>
+    </div>
+</div>
+<div class='ui modal ar-modal' id='libreAR-success-modal'>
+    <div class='header'>Adoption Report: Success</div>
+    <div class='content'>
+        <p>Thank you for submitting an Adoption Report!</p>
+    </div>
+    <div class='actions'>
+        <div id='libreAR-success-done-btn' class='ui blue button'>Done</div>
+    </div>
+</div>
+<div class='ui modal ar-modal' id='libreAR-error-modal'>
+    <div class='header'>Adoption Report: Error</div>
+    <div class='content'>
+        <p id='libreAR-error-msg'></p>
+    </div>
+    <div class='actions'>
+        <div id='libreAR-err-done-btn' class='ui black button'>Okay</div>
+    </div>
+</div>
