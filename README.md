@@ -15,10 +15,13 @@ library pages.
 (case does not matter).
 
 ## How to Use
-1. Download `libreAdoptionReport.js` from the `dist` folder.
-2. Include this script at the end of the `<body>` section in standard fashion:
+1. Download the `dist` folder.
+2. Include the `libreAdoptionReport.js` script at the end of the `<body>`
+section in standard fashion. *Note that while only the JS file needs to be
+explicitly included, the font files must be available in the same
+relative folder path.*
 ```
-<script type='text/javascript' src='./libreAdoptionReport.js'></script>
+<script type='text/javascript' src='./dist/libreAdoptionReport.js'></script>
 ```
 3. Create a "Submit Adoption Report" button and register an *onClick* function
 that calls `window.libreAdoptionReport.init()`, passing the resource *ID*,
