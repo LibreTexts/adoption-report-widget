@@ -11,7 +11,7 @@
         <form class='ui form' novalidate>
             <div class='two fields'>
                 <div class='required field' id='libreAR-email-field'>
-                    <label for='libreAR-email'>Your Email</label>
+                    <label for='libreAR-email-input'>Your Email</label>
                     <div class='ui left icon fluid input'>
                         <input
                             id='libreAR-email-input'
@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class='required field' id='libreAR-name-field'>
-                    <label for='libreAR-name'>Your Name</label>
+                    <label for='libreAR-name-input'>Your Name</label>
                     <div class='ui left icon fluid input'>
                         <input
                             id='libreAR-name-input'
@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div class='required field' id='libreAR-iam-field'>
-                <label for='ar-iam'>I am a(n)</label>
+                <label for='libreAR-iam-dropdown'>I am a(n)</label>
                 <div id='libreAR-iam-dropdown' class='ui selection dropdown'>
                     <div class='text'></div>
                     <i class='dropdown icon'></i>
@@ -47,7 +47,7 @@
                 <h3 class='ui header'>Instructor</h3>
                 <p>If you are using this LibreText in your class(es), please help us by providing some additional data.</p>
                 <div class='grouped fields required' id='libreAR-instr-libreNet-field'>
-                    <label for='ar-instr-librenet'>Is your Institution part of the LibreNet consortium?</label>
+                    <label for='libreAR-instr-libreNet-field'>Is your Institution part of the LibreNet consortium?</label>
                     <div class='field'>
                         <div class='ui radio checkbox ar-instr-librenet-check'>
                             <input type='radio' value='yes' name='libreAR-instr-librenet' tabindex='0' class='hidden' />
@@ -68,14 +68,14 @@
                     </div>
                 </div>
                 <div class='required field' id='libreAR-instr-inst-dropdown-field'>
-                    <label>Institution Name</label>
+                    <label for='libreAR-instr-inst-dropdown'>Institution Name</label>
                     <div id='libreAR-instr-inst-dropdown' class='ui selection dropdown'>
                         <div class='text'></div>
                         <i class='dropdown icon'></i>
                     </div>
                 </div>
                 <div class='required field' id='libreAR-instr-inst-field'>
-                    <label for='libreAR-not-libre-inst'>Institution Name</label>
+                    <label for='libreAR-not-libre-inst-input'>Institution Name</label>
                     <div class='ui left icon fluid input'>
                         <input
                             id='libreAR-not-libre-inst-input'
@@ -100,7 +100,7 @@
                 </div>
                 <p><em>If you have tought this class multiple times, please fill out this form for each.</em></p>
                 <div class='required field' id='libreAR-instr-taught-field'>
-                    <label>When did you teach this class?</label>
+                    <label for='libreAR-instr-taught-dropdown'>When did you teach this class?</label>
                     <div id='libreAR-instr-taught-dropdown' class='ui selection dropdown'>
                         <div class='text'></div>
                         <i class='dropdown icon'></i>
@@ -132,8 +132,8 @@
                         <i class='dollar icon'></i>
                     </div>
                 </div>
-                <div class='grouped fields'>
-                    <label>In which ways did students use this LibreText in your class? (Select all that apply)</label>
+                <div class='grouped fields' id='libreAR-instr-studentuse-field'>
+                    <label for='libreAR-instr-studentuse-field'>In which ways did students use this LibreText in your class? (Select all that apply)</label>
                     <div class='field'>
                         <div class='ui checkbox ar-instr-student-access-check'>
                             <input type='checkbox' id='libreAR-instr-student-access-online' tabindex='0' class='hidden' />
@@ -184,7 +184,7 @@
                 <h3 class='ui header'>Student</h3>
                 <p>We are happy to hear that you are using LibreTexts in your classes.</p>
                 <div class='field'>
-                    <label>How is this LibreText used in your class?</label>
+                    <label for='libreAR-student-use-dropdown'>How is this LibreText used in your class?</label>
                     <div id='libreAR-student-use-dropdown' class='ui selection dropdown'>
                         <div class='text'></div>
                         <i class='dropdown icon'></i>
@@ -227,7 +227,7 @@
                     </div>
                 </div>
                 <div class='grouped fields' id='libreAR-student-quality-field'>
-                    <label for='libreAR-student-quality'>On a scale from 1 to 5, what is the quality of this LibreTexts content?</label>
+                    <label for='libreAR-student-quality-field'>On a scale from 1 to 5, what is the quality of this LibreTexts content?</label>
                     <div class='field'>
                         <div class='ui radio checkbox ar-student-quality-check'>
                             <input type='radio' name='libreAR-student-quality' value='1' tabindex='0' class='hidden' />
@@ -259,8 +259,8 @@
                         </div>
                     </div>
                 </div>
-                <div class='grouped fields'>
-                    <label for='libreAR-student-navigate'>On a scale from 1 to 5, how easy is it to navigate the LibreTexts site?</label>
+                <div class='grouped fields' id='libreAR-student-navigate-field'>
+                    <label for='libreAR-student-navigate-field''>On a scale from 1 to 5, how easy is it to navigate the LibreTexts site?</label>
                     <div class='field'>
                         <div class='ui radio checkbox ar-student-navigate-check'>
                             <input type='radio' name='libreAR-student-navigate' value='1' tabindex='0' class='hidden' />
@@ -292,8 +292,8 @@
                         </div>
                     </div>
                 </div>
-                <div class='grouped fields'>
-                    <label>How did you access this LibreText? (Select all that apply)</label>
+                <div class='grouped fields' id='libreAR-student-access-field'>
+                    <label for='libreAR-student-access-field'>How did you access this LibreText? (Select all that apply)</label>
                     <div class='field'>
                         <div class='ui checkbox ar-student-access-check'>
                             <input type='checkbox' id='libreAR-student-access-online' tabindex='0' class='hidden' />
